@@ -10,3 +10,4 @@ img_data = requests.get(img_link).content
 with open('current_photo.jpg', 'wb') as handler:
     handler.write(img_data)
 st.image('current_photo.jpg')
+st.components.v1.html(img_link)
