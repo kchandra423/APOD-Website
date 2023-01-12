@@ -1,5 +1,6 @@
 import requests
 import streamlit as st
+import streamlit.components.v1 as components
 from bs4 import BeautifulSoup
 
 raw_html = requests.get('https://apod.nasa.gov/apod/astropix.html').text
