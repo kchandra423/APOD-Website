@@ -1,9 +1,9 @@
-import flask
-from flask import Flask, redirect, Response
-
 import requests
 from bs4 import BeautifulSoup
+from flask import Flask
+
 app = Flask(__name__)
+
 
 @app.route('/')
 def hello_world():  # put application's code here
@@ -16,7 +16,8 @@ def hello_world():  # put application's code here
     # f.write(data)
     # f.close()
     # f"<img src = '{img_link}', alt = 'amongus', style='vertical-align:middle'>" \
-    return  f"<img src = '{img_link}', alt = 'amongus', width = 100%, height = 100%, margin=0px>"
+    return f"<img src = '{img_link}', alt = 'amongus', width = auto, height = auto, margin=0px>"
+
 
 if __name__ == '__main__':
     app.run()
